@@ -113,6 +113,10 @@
           transform: rotate(-20deg);
         }
                 }
-           
+
+.sembunyi {
+  /* Comment out the following to test visibility */
+  /* display: none; */
+}    
            
 
