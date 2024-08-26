@@ -1,81 +1,280 @@
 <!DOCTYPE html>
-<html>
-<meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<html lang="en">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-  <link href="https://htmlku.com/buatkamu/styles.css" rel="stylesheet">
-
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
-  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
-  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
-  
 <head>
-<title>Htmlku.com/buatkamu - Pesan Hanya Untukmu 💐</title>
-<meta name="description" content="HTML Replit Coding">
-<!-- 
-  Made with love by feeldream!
-  
-     Blog: https://feeldream.id
-     
-  Thanks to all <3
--->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Buat Keyy💐</title>
+    <meta name="description" content="HTML Replit Coding">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+    <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+    
+    <style>
+        body {
+            font-family: 'Shippori Antique', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f0e6d6; /* Light brown background */
+        }
+
+        #bodyblur {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #wallpaper {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #beneranblur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(5px);
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #Content {
+            position: relative;
+            text-align: center;
+            color: #fff;
+            z-index: 1;
+        }
+
+        #loveIn {
+            cursor: pointer;
+            font-size: 2rem;
+            color: #ff0040;
+        }
+
+        #ket {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+
+        .kumpulanstiker img {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+        }
+
+        #kolombaru {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #kolombaru li {
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        #opsL {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #ff0040;
+        }
+
+        .sty2b {
+            margin: 20px 0;
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        .kuning {
+            color: #ffea00;
+        }
+
+        .merahmuda {
+            color: #ff6f6f;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
-	
-   <!-- Ganti Audio di sini -->
-   <audio src="https://feeldreams.github.io/maimuna.mp3" id="linkmp3" class="sembunyi"></audio>
-   
-   <div id="bodyblur">
-     <!-- Wallpaper --><img src="https://feeldreams.github.io/bromo.jpg" id="wallpaper"/><div id="beneranblur"></div>
-   </div>
-   
-   <div id='Content'>
+    <!-- Audio Element -->
+    <audio src="https://feeldreams.github.io/maimuna.mp3" id="linkmp3" class="hidden"></audio>
 
-     <div id="loveIn">
-       <a href="#" class="lovein">&#10084;</a>
-     </div>
-     <p id="ket">Sentuh LOVEnya!</p>
+    <div id="bodyblur">
+        <!-- Wallpaper -->
+        <img src="https://i.ibb.co/RhcG7pS/wplangit.webp" id="wallpaper" alt="Wallpaper">
+        <div id="beneranblur"></div>
+    </div>
 
-     <div class="kumpulanstiker">
-         <!-- Stiker untuk Konten -->
-         <img src="https://feeldreams.github.io/pandapanah.gif" id="fotostiker"/>
-         <img src="https://feeldreams.github.io/bunga.gif" id="fotostiker1"/>
-         <img src="https://feeldreams.github.io/gumush.gif" id="fotostiker2"/>
-         <img src="https://feeldreams.github.io/g5.gif" id="fotostiker3"/>
-         <img src="https://feeldreams.github.io/mmm.gif" id="fotostiker4"/>
-         <img src="https://feeldreams.github.io/emawh.gif" id="fotostiker5"/>
-     </div>
-     
-     <p id="utama" class="utama"></p>
-     
-     <div><blockquote id='bq' data-text=''>
-       
-       <p id="kalimat"><span style="font-size:15px">Aku Punya Pesan<br>Nih buat Kamu 🫢❤️</span></p>
-       <p id="kalimatb"></p>
+    <div id="Content">
+        <div id="loveIn">
+            <a href="#" class="lovein">&#10084;</a>
+        </div>
+        <p id="ket">Sentuh LOVEnya!</p>
 
-       <p id="pesan1">Klik 4 LOVE ini! 🫣❤️</p>
-       <div id="kolombaru">
-         <li id="lv1">❤️</li>
-         <li id="lv2">❤️</li>
-         <li id="lv3">❤️</li>
-         <li id="lv4">❤️</li>
-       </div>
+        <div class="kumpulanstiker">
+            <!-- Stickers -->
+            <img src="https://feeldreams.github.io/pandahiya.gif" id="fotostiker" alt="Sticker 1">
+            <img src="https://feeldreams.github.io/pandapanah.gif" id="fotostiker1" alt="Sticker 2">
+            <img src="https://feeldreams.github.io/mmm.gif" id="fotostiker2" alt="Sticker 3">
+            <img src="https://feeldreams.github.io/g5.gif" id="fotostiker3" alt="Sticker 4">
+            <img src="https://feeldreams.github.io/mmm.gif" id="fotostiker4" alt="Sticker 5">
+            <img src="https://feeldreams.github.io/emawh.gif" id="fotostiker5" alt="Sticker 6">
+        </div>
 
-       <p id="pesan4" class="sty2b"><b style="font-size:15px">Sehat selalu yaa<br><span class='kuning'>kamu</span> di sana! 🫣</b></p>
-       <p id="pesan5" class="sty2b">Jangan pernah telat makan,<br>apalagi telat beribadah...</p>
-       <p id="pesan6" class="sty2b">Kalo ngerasa hari ini buruk,<br>percayalah semua akan<br>cepat berlalu... 🫶</p>
-       <p id="pesan7" class="sty2b left"><span class='kuning bold'>Terakhir</span>,<br><br>Semoga tidak ada hal yang membuat <span class='merahmuda'>senyumanmu</span> hilang, dan semoga selalu ada jalan untuk menggapai impian yang pernah kamu ceritakan dan semoga proses tidak mengkhianati hasilnya... 💐</p>
-       <p id="pesan8" class="sty2b left"><b>Semangat yaa 🫣😍💗</b></p>
+        <p id="utama" class="utama"></p>
 
-       <!-- Tombol Lanjut -->
-       <p id="opsL">Klik untuk Lanjut</p>
-     </blockquote></div>
+        <div>
+            <blockquote id="bq" data-text="">
+                <p id="kalimat">
+                    <span style="font-size:15px">Aku Punya Pesan<br>Random buat Kamu 🫢❤️</span>
+                </p>
+                <p id="kalimatb"></p>
 
-   </div>
+                <p id="pesan1">Klik 4 LOVE ini! 🫣❤️</p>
+                <div id="kolombaru">
+                    <li id="lv1">💗</li>
+                    <li id="lv2">💗</li>
+                    <li id="lv3">💗</li>
+                    <li id="lv4">💗</li>
+                </div>
 
-<script src="https://htmlku.com/buatkamu/script.js"></script>
+                <div id="kumpulanteks" class="hidden">
+                    <p>Kamu itu kaya indomie di campur le meneral tau, soalnya udah jadi selaraku, ada manis manisnya lagi avvvv <3</p>
+                    <p>Kamu itu sama kaya warung uncle muthu, Tau kenapa? 🤔<br><br>Karna cakep ada, lucu ada, manis ada, baik ada dan semua nya ada ><</p>
+                    <p>Kamu itu kaya hari sabtu, sabtu sabtunya dihatiku piiww piiwww 👉👈</p>
+                    <p>Kamu tauuu? Ternyata waktu di Indonesia ada 4 lohh 🤔<br><br>WIB<br>WITA<br>WIT<br><br>Dan...<br><b>WITH UUUUUU 🤭</b></p>
+                </div>
+
+                <p id="pesan4" class="sty2b left">
+                    <b style="font-size:15px">Sehat selalu yaa<br><span class="kuning">kamu</span> di sana! 🫣</b>
+                </p>
+                <p id="pesan5" class="sty2b">Jangan pernah telat makan,<br>apalagi telat beribadah...</p>
+                <p id="pesan6" class="sty2b">Kalo ngerasa hari ini buruk,<br>percayalah semua akan<br>cepat berlalu... 🫶</p>
+                <p id="pesan7" class="sty2b left">
+                    <span class="kuning bold">Terakhir</span>,<br><br>Semoga tidak ada hal yang membuat <span class="merahmuda">senyumanmu</span> hilang, dan semoga selalu ada jalan untuk menggapai impian yang pernah kamu ceritakan dan semoga proses tidak mengkhianati hasilnya... 💐
+                </p>
+                <p id="pesan8" class="sty2b left">
+                    <b style="font-size: 18px;">😆😍💗</b>
+                </p>
+
+                <!-- Tombol Lanjut -->
+                <p id="opsL">Klik untuk Lanjut</p>
+            </blockquote>
+        </div>
+    </div>
+
+    <script>
+        const body = document.querySelector("body");
+        const audio = document.getElementById('linkmp3');
+        let ftganti = 0;
+        const deffotostiker = document.getElementById('fotostiker').src;
+
+        document.getElementById("Content").style = "opacity:1;margin-top:35vh";
+        const swals = Swal.mixin({
+            allowOutsideClick: false,
+            cancelButtonColor: '#FF0040',
+            imageHeight: 80,
+        });
+
+        let sudahKlik = false;
+        document.getElementById("loveIn").onclick = function () {
+            if (!sudahKlik) {
+                audio.play();
+                sudahKlik = true;
+                document.getElementById('loveIn').style = "transition:all .8s ease;transform:scale(15);opacity:0";
+                document.getElementById('wallpaper').style = "transform: scale(1.5);";
+                document.getElementById('ket').style = "display:none";
+                setTimeout(initengahan, 300);
+                setTimeout(inipesan, 500);
+            }
+        }
+
+        async function inipesan() {
+            const { value: nama } = await swals.fire({
+                title: 'Masukin Nama Kamu 🫣',
+                input: 'text',
+                confirmButtonText: 'Lanjut'
+            });
+            if (nama && nama.length <= 10) {
+                window.nama = nama;
+                const vketikutama = "Alooo, " + nama + " ✨";
+                mulainama(vketikutama);
+            } else {
+                await swals.fire('Ups!', 'Nama tidak boleh kosong atau lebih dari 10 karakter, ya!');
+                inipesan();
+            }
+        }
+
+        function initengahan() {
+            document.getElementById('loveIn').style = "display:none";
+            document.getElementById('ket').style = "display:none";
+            document.getElementById('Content').style = "opacity:1;margin-top:30px";
+            document.getElementById('bodyblur').style = "opacity:.7";
+            document.getElementById('wallpaper').style = "transform: scale(1.5);";
+        }
+
+        async function mulainama(vketikutama) {
+            document.getElementById('bodyblur').style = "opacity:.7";
+            document.getElementById('wallpaper').style = "transform: scale(1)";
+            document.getElementById('fotostiker').style = "display:inline-flex;";
+            setTimeout(ftmuncul, 200);
+            setTimeout(() => ketutama(vketikutama), 500);
+        }
+
+        function ftmuncul() {
+            const stickers = [
+                deffotostiker, document.getElementById('fotostiker1').src,
+                document.getElementById('fotostiker2').src, document.getElementById('fotostiker3').src,
+                document.getElementById('fotostiker4').src, document.getElementById('fotostiker5').src
+            ];
+            document.getElementById('fotostiker').src = stickers[ftganti];
+            document.getElementById('fotostiker').style = "display:inline-flex;opacity:1;transform:scale(1)";
+        }
+
+        function fthilang() {
+            document.getElementById('fotostiker').style = "display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(.1)";
+            ftganti = (ftganti + 1) % 6;
+        }
+
+        async function ketutama(vketikutama) {
+            document.getElementById('bq').setAttribute('data-text', vketikutama);
+            document.getElementById('bq').classList.add('notranslate');
+            const instance = new TypeIt("#utama", {
+                strings: [vketikutama],
+                startDelay: 100,
+                nextStringDelay: 200,
+                loop: false,
+                speed: 80,
+                waitUntilVisible: true
+            });
+            await instance.go().promise;
+            setTimeout(fthilang, 1500);
+        }
+    </script>
 </body>
+
 </html>
